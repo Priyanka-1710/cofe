@@ -144,10 +144,38 @@ document.addEventListener("DOMContentLoaded", function() {
     displayMenu(filtered);
   });
 
+  const navbar = document.querySelector(".navbar");
+  const navToggle = document.getElementById("navToggle");
+  const closeMobileNav = () => navbar.classList.remove("open");
+
+  navToggle.addEventListener("click", function() {
+    navbar.classList.toggle("open");
+  });
+
   // Order Button
   document.getElementById("orderBtn").addEventListener("click", function() {
     displayMenu(coffeeProducts);
     window.scrollTo({ top: document.querySelector(".menu").offsetTop, behavior: "smooth" });
+    closeMobileNav();
+  });
+
+  // Menu Navbar Link
+  document.getElementById("menuNav").addEventListener("click", function() {
+    displayMenu(coffeeProducts);
+    window.scrollTo({ top: document.querySelector(".menu").offsetTop, behavior: "smooth" });
+    closeMobileNav();
+  });
+
+  // About Navbar Link
+  document.getElementById("aboutNav").addEventListener("click", function() {
+    window.scrollTo({ top: document.getElementById("aboutSection").offsetTop, behavior: "smooth" });
+    closeMobileNav();
+  });
+
+  // Contact Navbar Link
+  document.getElementById("contactNav").addEventListener("click", function() {
+    window.scrollTo({ top: document.getElementById("contactSection").offsetTop, behavior: "smooth" });
+    closeMobileNav();
   });
 
   // Add Review

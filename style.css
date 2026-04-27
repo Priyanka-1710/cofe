@@ -18,10 +18,24 @@ body {
   align-items: center;
   padding: 10px 30px;
   background-color: #2C1810;
+  position: relative;
 }
-li{
+.navbar nav {
+  display: flex;
+  align-items: center;
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+li {
   list-style: none;
   justify-content: space-between;
+  cursor: pointer;
 }
 #navLinks {
   padding: 10px 0;
@@ -66,8 +80,18 @@ li{
 
 #orderBtn{
   border-radius: 5px;
+  padding: 10px 10px;
+  color: white;
+  font-weight: bold;
+  background-color: #8b6f47;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+#orderBtn:hover {
 
 }
+
 
 /* MENU */
 .menu {
@@ -622,6 +646,42 @@ li{
   .action-btn {
     padding: 10px;
     font-size: 13px;
+  }
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  #navLinks {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    background: #2C1810;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar.open #navLinks {
+    display: flex;
+  }
+
+  #navLinks li {
+    width: 100%;
+    text-align: left;
+  }
+
+  #navLinks li:last-child {
+    margin-top: 10px;
   }
 }
 

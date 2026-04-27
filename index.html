@@ -12,13 +12,14 @@
 <!-- NAVBAR -->
 <header class="navbar">
   <h1 class="logo">BREWS ☕</h1>
+  <button id="navToggle" class="nav-toggle" aria-label="Open navigation">☰</button>
 
   <nav>
-    <ul id="navLinks">
-      <li>Menu</li>
-      <li>About</li>
-      <li>Contact</li>
-      <li style="cursor: pointer;" onclick="openCheckout()">🛒 <span id="cartCount">0</span></li>
+    <ul id="navLinks" class="nav-links">
+      <li id="menuNav">Menu</li>
+      <li id="aboutNav">About</li>
+      <li id="contactNav">Contact</li>
+      <li onclick="openCheckout()">🛒 <span id="cartCount">0</span></li>
     </ul>
   </nav>
 </header>
@@ -50,7 +51,7 @@
 </section>
 
 <!-- ABOUT US -->
-<section class="about">
+<section class="about" id="aboutSection">
   <div class="about-container">
     <div class="about-content">
       <h2>About BREWS Coffee</h2>
@@ -124,7 +125,7 @@
 </section>
 
 <!-- CONTACT US -->
-<section class="contact">
+<section class="contact" id="contactSection">
   <div class="contact-header">
     <h2>Get In Touch</h2>
     <p>Ready to experience the perfect cup? We'd love to hear from you!</p>
